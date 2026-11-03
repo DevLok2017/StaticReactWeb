@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "scrollReveal": {
+    "duration": 0.6,
+    "delay": 0.1,
+    "easing": [0.22, 1, 0.36, 1],
+    "distance": 24
+  },
+  "pageTransition": { "duration": 0.8 },
+  "floating": { "enabled": true, "duration": 4 },
+  "reducedMotion": { "disableFloating": true, "disableParallax": true }
+}

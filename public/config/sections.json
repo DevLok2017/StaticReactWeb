@@ -1,0 +1,17 @@
+{
+  "sections": [
+    { "id": "opening", "type": "invitation", "enabled": true, "order": 1 },
+    { "id": "hero", "type": "hero", "enabled": true, "order": 2 },
+    { "id": "family", "type": "family", "enabled": true, "order": 3 },
+    { "id": "couple", "type": "couple", "enabled": true, "order": 4 },
+    { "id": "loveStory", "type": "loveStory", "enabled": true, "order": 5 },
+    { "id": "storybook", "type": "storybook", "enabled": true, "order": 6 },
+    { "id": "memories", "type": "memories", "enabled": true, "order": 7 },
+    { "id": "countdown", "type": "countdown", "enabled": true, "order": 8 },
+    { "id": "ceremonies", "type": "ceremonies", "enabled": true, "order": 9 },
+    { "id": "venue", "type": "venue", "enabled": true, "order": 10 },
+    { "id": "gallery", "type": "gallery", "enabled": true, "order": 11 },
+    { "id": "rsvp", "type": "rsvp", "enabled": true, "order": 12 },
+    { "id": "closing", "type": "closing", "enabled": true, "order": 13 }
+  ]
+}

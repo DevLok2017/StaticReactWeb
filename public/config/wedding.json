@@ -1,0 +1,212 @@
+{
+  "coupleNames": {
+    "bride": "Ananya",
+    "groom": "Rohan"
+  },
+  "weddingDate": "2027-02-14T10:00:00+05:30",
+  "timezone": "Asia/Kolkata",
+  "blessing": "ॐ Shree Ganeshaya Namah",
+  "heroTagline": "Two hearts, one journey, one forever",
+  "heroImage": "/assets/images/couple/hero.jpg",
+  "monogram": "A & R",
+  "family": {
+    "bride": {
+      "surname": "Sharma",
+      "photo": "/assets/images/family/bride-family.webp",
+      "parents": [
+        { "name": "Mr. Vikram Sharma", "relation": "Father" },
+        { "name": "Mrs. Sunita Sharma", "relation": "Mother" }
+      ],
+      "grandparents": [
+        { "name": "Late Mr. Ram Sharma", "relation": "Grandfather" },
+        { "name": "Mrs. Kamla Sharma", "relation": "Grandmother" }
+      ],
+      "siblings": [
+        { "name": "Aditi Sharma", "relation": "Sister" }
+      ]
+    },
+    "groom": {
+      "surname": "Mehta",
+      "photo": "/assets/images/family/groom-family.webp",
+      "parents": [
+        { "name": "Mr. Anil Mehta", "relation": "Father" },
+        { "name": "Mrs. Rekha Mehta", "relation": "Mother" }
+      ],
+      "grandparents": [
+        { "name": "Mr. Mohan Mehta", "relation": "Grandfather" },
+        { "name": "Mrs. Lata Mehta", "relation": "Grandmother" }
+      ],
+      "siblings": [
+        { "name": "Karan Mehta", "relation": "Brother" }
+      ]
+    }
+  },
+  "profiles": {
+    "bride": {
+      "name": "Ananya",
+      "photo": "/assets/images/bride/bride-profile.webp",
+      "intro": "A dreamer with a love for classical dance, chai, and golden-hour walks. Ananya lights up every room she walks into.",
+      "culturalBackground": "Rajasthani Heritage",
+      "traits": ["Family-oriented", "Creative", "Easygoing"],
+      "hobbies": ["Kathak dance", "Painting", "Reading"]
+    },
+    "groom": {
+      "name": "Rohan",
+      "photo": "/assets/images/groom/groom-profile.webp",
+      "intro": "An adventurer at heart who finds joy in mountains, music, and a good cup of filter coffee. Rohan is the calm to every storm.",
+      "culturalBackground": "Gujarati Heritage",
+      "traits": ["Adventurous", "Travel lover", "Sports enthusiast"],
+      "hobbies": ["Trekking", "Guitar", "Cricket"]
+    }
+  },
+  "loveStory": [
+    {
+      "number": 1,
+      "title": "Where It Began",
+      "description": "A chance introduction at a mutual friend's birthday party sparked a conversation that lasted till 2 AM.",
+      "date": "August 2021",
+      "image": "/assets/images/couple/story-01.webp"
+    },
+    {
+      "number": 2,
+      "title": "Two Separate Paths",
+      "description": "Different cities, busy careers, but a bond that only grew stronger with every late-night call.",
+      "date": "2022",
+      "image": "/assets/images/couple/story-02.webp"
+    },
+    {
+      "number": 3,
+      "title": "The Unexpected Reunion",
+      "description": "A trip back home turned into something neither of them expected — and this time, they didn't let go.",
+      "date": "2023",
+      "image": "/assets/images/couple/story-03.webp"
+    },
+    {
+      "number": 4,
+      "title": "One Team, Forever",
+      "description": "On a quiet evening by the lake, Rohan asked Ananya to be his forever — and she said yes.",
+      "date": "2025",
+      "image": "/assets/images/couple/story-04.webp"
+    }
+  ],
+  "storybook": [
+    {
+      "title": "Chapter One",
+      "text": "It all started with a cup of coffee and a conversation neither of us wanted to end.",
+      "image": "/assets/images/couple/storybook-01.webp"
+    },
+    {
+      "title": "Chapter Two",
+      "text": "Through long-distance calls and surprise visits, we built something unshakeable.",
+      "image": "/assets/images/couple/storybook-02.webp"
+    },
+    {
+      "title": "Chapter Three",
+      "text": "And now, we invite you to be part of our happily ever after.",
+      "image": "/assets/images/couple/storybook-03.webp"
+    }
+  ],
+  "childhoodMemories": [
+    { "photo": "/assets/images/bride/childhood.jpg", "caption": "Little Ananya", "owner": "bride" },
+    { "photo": "/assets/images/groom/childhood.webp", "caption": "Little Rohan", "owner": "groom" }
+  ],
+  "ceremonies": {
+    "bride": [
+      {
+        "id": "bride-haldi",
+        "name": "Haldi Ceremony",
+        "date": "2027-02-12",
+        "startTime": "10:00 AM",
+        "endTime": "1:00 PM",
+        "description": "A joyous turmeric ceremony filled with music, laughter and blessings for the bride.",
+        "image": "/assets/images/ceremonies/haldi.jpg",
+        "venue": "Sharma Residence, Jaipur",
+        "dressCode": "Yellow Attire"
+      },
+      {
+        "id": "bride-mehendi",
+        "name": "Mehendi Ceremony",
+        "date": "2027-02-13",
+        "startTime": "4:00 PM",
+        "endTime": "8:00 PM",
+        "description": "An evening of intricate henna art, music and dance to celebrate the bride-to-be.",
+        "image": "/assets/images/ceremonies/mehendi.jpg",
+        "venue": "The Rose Garden, Jaipur",
+        "dressCode": "Green & Pastels"
+      }
+    ],
+    "groom": [
+      {
+        "id": "groom-haldi",
+        "name": "Haldi Ceremony",
+        "date": "2027-02-12",
+        "startTime": "10:00 AM",
+        "endTime": "1:00 PM",
+        "description": "A traditional turmeric ceremony blessing the groom ahead of the big day.",
+        "image": "/assets/images/ceremonies/haldi.jpg",
+        "venue": "Mehta Residence, Ahmedabad",
+        "dressCode": "Yellow Attire"
+      },
+      {
+        "id": "groom-sangeet",
+        "name": "Sangeet Night",
+        "date": "2027-02-13",
+        "startTime": "7:00 PM",
+        "endTime": "11:00 PM",
+        "description": "A night of music, dance performances and celebration with both families.",
+        "image": "/assets/images/ceremonies/sangeet.jpg",
+        "venue": "Grand Lawns, Udaipur",
+        "dressCode": "Festive Indo-Western"
+      },
+      {
+        "id": "wedding-ceremony",
+        "name": "Wedding Ceremony",
+        "date": "2027-02-14",
+        "startTime": "10:00 AM",
+        "endTime": "1:00 PM",
+        "description": "The sacred wedding rituals uniting Ananya and Rohan as husband and wife.",
+        "image": "/assets/images/ceremonies/wedding.jpg",
+        "venue": "Lake Palace Lawns, Udaipur",
+        "dressCode": "Traditional Indian Attire",
+        "instructions": "Please arrive 30 minutes early for the baraat procession."
+      }
+    ]
+  },
+  "venue": {
+    "name": "Lake Palace Lawns",
+    "address": "Pichola Road, near City Palace",
+    "city": "Udaipur",
+    "state": "Rajasthan",
+    "country": "India",
+    "photo": "/assets/images/ceremonies/venue-palace.jpg",
+    "mapsUrl": "https://maps.google.com/?q=Lake+Palace+Udaipur"
+  },
+  "gallery": [
+    { "src": "/assets/images/gallery/gallery-01.jpg", "caption": "Hand in hand", "width": 1920, "height": 2877 },
+    { "src": "/assets/images/gallery/gallery-02.jpg", "caption": "Haldi ceremony", "width": 790, "height": 1106 },
+    { "src": "/assets/images/gallery/gallery-03.jpg", "caption": "Mehendi art", "width": 1280, "height": 853 },
+    { "src": "/assets/images/gallery/gallery-04.jpg", "caption": "The pheras", "width": 1280, "height": 853 },
+    { "src": "/assets/images/gallery/gallery-05.jpg", "caption": "Sangeet night", "width": 1280, "height": 853 },
+    { "src": "/assets/images/gallery/gallery-06.jpg", "caption": "The venue", "width": 1920, "height": 1906 }
+  ],
+  "rsvp": {
+    "bride": [
+      { "name": "Vikram Sharma", "relationship": "Father of the Bride", "phone": "+919876543210" },
+      { "name": "Aditi Sharma", "relationship": "Sister of the Bride", "phone": "+919876543211", "whatsapp": "+919876543211" }
+    ],
+    "groom": [
+      { "name": "Anil Mehta", "relationship": "Father of the Groom", "phone": "+919876543220" },
+      { "name": "Karan Mehta", "relationship": "Brother of the Groom", "phone": "+919876543221", "whatsapp": "+919876543221" }
+    ]
+  },
+  "closingMessage": "Your presence is the greatest gift we could ask for. We can't wait to celebrate this beautiful journey with the people we love most.",
+  "music": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/62/Pachelbel%27s_Canon.ogg",
+    "title": "Pachelbel's Canon in D (placeholder — replace with your song)"
+  },
+  "social": {
+    "title": "Ananya & Rohan — Wedding Invitation",
+    "description": "Join us in celebrating the wedding of Ananya & Rohan on 14th February 2027 in Udaipur, Rajasthan.",
+    "previewImage": "/assets/images/couple/hero.jpg"
+  }
+}
