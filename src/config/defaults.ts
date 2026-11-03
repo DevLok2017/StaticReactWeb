@@ -25,6 +25,7 @@ export const DEFAULT_WEDDING: WeddingConfig = {
   venue: { name: 'Venue TBA', address: '', city: '' },
   gallery: [],
   rsvp: { bride: [], groom: [] },
+  privacy: { lockDetails: true, detailsCode: 'AK47' },
 }
 
 export const DEFAULT_THEMES: ThemesFile = {
@@ -77,8 +78,8 @@ export const DEFAULT_SECTIONS: SectionsFile = {
 
 export const DEFAULT_ANIMATIONS: AnimationsConfig = {
   enabled: true,
-  scrollReveal: { duration: 0.6, delay: 0.1, easing: [0.22, 1, 0.36, 1], distance: 24 },
-  pageTransition: { duration: 0.8 },
+  scrollReveal: { duration: 0.75, delay: 0.08, easing: [0.22, 1, 0.36, 1], distance: 36 },
+  pageTransition: { duration: 0.9 },
   floating: { enabled: true, duration: 4 },
   reducedMotion: { disableFloating: true, disableParallax: true },
 }

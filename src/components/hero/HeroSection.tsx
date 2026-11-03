@@ -1,15 +1,20 @@
 import { motion } from 'framer-motion'
 import { format } from 'date-fns'
 import { useAppConfig } from '../../config/ConfigContext'
+import { useDetailsVisible } from '../../context/PrivacyContext'
 import { Container } from '../common/Container'
 import { FloralDecoration } from '../common/FloralDecoration'
 import { ScrollIndicator } from '../common/ScrollIndicator'
 import { PlaceholderImage } from '../common/PlaceholderImage'
+import { ShowDetailsButton } from '../common/ShowDetailsButton'
 import { MandapArch } from '../common/illustrations/MandapArch'
 import { PeacockMotif } from '../common/illustrations/PeacockMotif'
+import { useReducedMotion } from '../../hooks/useReducedMotion'
 
 export function HeroSection() {
   const { wedding } = useAppConfig()
+  const detailsVisible = useDetailsVisible()
+  const reducedMotion = useReducedMotion()
   const date = new Date(wedding.weddingDate)
 
   return (
@@ -35,6 +40,20 @@ export function HeroSection() {
 
       <PeacockMotif className="absolute top-10 left-2 h-28 w-28 -rotate-12 opacity-80 sm:h-36 sm:w-36 md:left-10" />
       <PeacockMotif className="absolute top-10 right-2 h-28 w-28 scale-x-[-1] rotate-12 opacity-80 sm:h-36 sm:w-36 md:right-10" />
+
+      {!reducedMotion &&
+        Array.from({ length: 5 }).map((_, i) => (
+          <motion.span
+            key={i}
+            className="pointer-events-none absolute text-[var(--color-gold)]/30"
+            style={{ left: `${15 + i * 16}%`, bottom: '8%' }}
+            animate={{ y: [0, -18, 0], opacity: [0.2, 0.5, 0.2] }}
+            transition={{ duration: 3.5 + i * 0.5, repeat: Infinity, ease: 'easeInOut' }}
+            aria-hidden
+          >
+            ❀
+          </motion.span>
+        ))}
 
       <Container className="relative flex flex-col items-center gap-8 text-center">
         <motion.p
@@ -81,14 +100,25 @@ export function HeroSection() {
           </motion.p>
         )}
 
-        <motion.p
-          className="text-lg tracking-wide text-[var(--color-secondary)]"
+        <motion.div
+          className="flex flex-col items-center gap-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9, delay: 0.4 }}
         >
-          {format(date, 'EEEE, d MMMM yyyy')}
-        </motion.p>
+          {detailsVisible ? (
+            <p className="text-lg tracking-wide text-[var(--color-secondary)]">
+              {format(date, 'EEEE, d MMMM yyyy')}
+            </p>
+          ) : (
+            <>
+              <p className="text-lg tracking-[0.35em] text-[var(--color-secondary)]/70 blur-[2px] select-none">
+                ••••• • ••••••••• ••••
+              </p>
+              <ShowDetailsButton />
+            </>
+          )}
+        </motion.div>
 
         <div className="mt-6">
           <ScrollIndicator />

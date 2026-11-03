@@ -58,10 +58,10 @@ export function InteractiveStorybook() {
           >
             <motion.div
               className="relative flex w-full max-w-xl flex-col gap-4 rounded-[var(--radius-lg)] bg-[var(--color-background-alt)] p-8 shadow-[var(--shadow-strong)]"
-              initial={{ rotateY: -90, opacity: 0 }}
-              animate={{ rotateY: 0, opacity: 1 }}
-              exit={{ rotateY: 90, opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ rotateY: -85, opacity: 0, scale: 0.92 }}
+              animate={{ rotateY: 0, opacity: 1, scale: 1 }}
+              exit={{ rotateY: 70, opacity: 0, scale: 0.94 }}
+              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
               style={{ transformPerspective: 1200 }}
               onClick={(e) => e.stopPropagation()}
             >
@@ -77,10 +77,10 @@ export function InteractiveStorybook() {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={page}
-                  initial={{ opacity: 0, x: 24 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -24 }}
-                  transition={{ duration: 0.35 }}
+                  initial={{ opacity: 0, x: 40, rotateY: -12 }}
+                  animate={{ opacity: 1, x: 0, rotateY: 0 }}
+                  exit={{ opacity: 0, x: -40, rotateY: 12 }}
+                  transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                   className="flex flex-col items-center gap-4 text-center"
                 >
                   {pages[page].image && (

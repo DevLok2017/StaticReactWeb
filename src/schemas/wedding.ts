@@ -122,8 +122,15 @@ export const weddingSchema = z.object({
     .object({
       src: z.string(),
       title: z.string().optional(),
+      autoplayOnOpen: z.boolean().default(true),
     })
     .optional(),
+  privacy: z
+    .object({
+      lockDetails: z.boolean().default(true),
+      detailsCode: z.string().default('AK47'),
+    })
+    .default({ lockDetails: true, detailsCode: 'AK47' }),
   social: z
     .object({
       title: z.string().optional(),

@@ -200,9 +200,14 @@
     ]
   },
   "closingMessage": "Your presence is the greatest gift we could ask for. We can't wait to celebrate this beautiful journey with the people we love most.",
+  "privacy": {
+    "lockDetails": true,
+    "detailsCode": "AK47"
+  },
   "music": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/6/62/Pachelbel%27s_Canon.ogg",
-    "title": "Pachelbel's Canon in D (placeholder — replace with your song)"
+    "title": "Pachelbel's Canon in D (placeholder — replace with your song)",
+    "autoplayOnOpen": true
   },
   "social": {
     "title": "Ananya & Rohan — Wedding Invitation",

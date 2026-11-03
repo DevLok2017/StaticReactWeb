@@ -2,9 +2,13 @@ import { Suspense, useEffect, useState } from 'react'
 import { HelmetProvider, Helmet } from 'react-helmet-async'
 import { loadAppConfig, type AppConfig } from './config/loadConfig'
 import { ConfigContext } from './config/ConfigContext'
+import { PrivacyProvider } from './context/PrivacyContext'
+import { MusicProvider } from './context/MusicContext'
 import { applyTheme } from './utils/applyTheme'
 import { ErrorBoundary } from './components/common/ErrorBoundary'
+import { DetailsUnlockModal } from './components/common/DetailsUnlockModal'
 import { InvitationCover } from './components/invitation/InvitationCover'
+import { MusicPlayer } from './components/footer/MusicPlayer'
 import { sectionRegistry } from './components/sectionRegistry'
 
 function AppContent({ config }: { config: AppConfig }) {
@@ -14,36 +18,43 @@ function AppContent({ config }: { config: AppConfig }) {
   }
 
   const invitationSection = sections.sections.find((s) => s.type === 'invitation')
+  const invitationEnabled = invitationSection?.enabled ?? true
   const orderedSections = sections.sections
     .filter((s) => s.enabled && s.type !== 'invitation')
     .sort((a, b) => a.order - b.order)
 
   return (
     <ConfigContext.Provider value={config}>
-      <Helmet>
-        <title>
-          {wedding.coupleNames.bride} &amp; {wedding.coupleNames.groom} — Wedding Invitation
-        </title>
-        {social?.description && <meta name="description" content={social.description} />}
-        {social?.title && <meta property="og:title" content={social.title} />}
-        {social?.previewImage && <meta property="og:image" content={social.previewImage} />}
-      </Helmet>
+      <PrivacyProvider>
+        <MusicProvider invitationEnabled={invitationEnabled}>
+          <Helmet>
+            <title>
+              {wedding.coupleNames.bride} &amp; {wedding.coupleNames.groom} — Wedding Invitation
+            </title>
+            {social?.description && <meta name="description" content={social.description} />}
+            {social?.title && <meta property="og:title" content={social.title} />}
+            {social?.previewImage && <meta property="og:image" content={social.previewImage} />}
+          </Helmet>
 
-      <InvitationCover enabled={invitationSection?.enabled ?? true} />
+          <InvitationCover enabled={invitationEnabled} />
+          <MusicPlayer />
+          <DetailsUnlockModal />
 
-      <main>
-        {orderedSections.map((section) => {
-          const Component = sectionRegistry[section.type]
-          if (!Component) return null
-          return (
-            <ErrorBoundary key={section.id}>
-              <Suspense fallback={<div className="py-20" />}>
-                <Component />
-              </Suspense>
-            </ErrorBoundary>
-          )
-        })}
-      </main>
+          <main>
+            {orderedSections.map((section) => {
+              const Component = sectionRegistry[section.type]
+              if (!Component) return null
+              return (
+                <ErrorBoundary key={section.id}>
+                  <Suspense fallback={<div className="py-20" />}>
+                    <Component />
+                  </Suspense>
+                </ErrorBoundary>
+              )
+            })}
+          </main>
+        </MusicProvider>
+      </PrivacyProvider>
     </ConfigContext.Provider>
   )
 }

@@ -1,13 +1,15 @@
 import { useAppConfig } from '../../config/ConfigContext'
+import { useDetailsVisible } from '../../context/PrivacyContext'
 import { Container } from '../common/Container'
 import { Reveal } from '../common/Reveal'
 import { Monogram } from '../common/Monogram'
 import { FloralDecoration } from '../common/FloralDecoration'
+import { ShowDetailsButton } from '../common/ShowDetailsButton'
 import { CountdownTimer } from '../countdown/CountdownTimer'
-import { MusicPlayer } from './MusicPlayer'
 
 export function ClosingSection() {
   const { wedding } = useAppConfig()
+  const detailsVisible = useDetailsVisible()
 
   return (
     <section
@@ -23,7 +25,10 @@ export function ClosingSection() {
       <Container className="relative flex flex-col items-center gap-6">
         <Reveal>
           <Monogram
-            text={wedding.monogram ?? `${wedding.coupleNames.bride[0]} & ${wedding.coupleNames.groom[0]}`}
+            text={
+              wedding.monogram ??
+              `${wedding.coupleNames.bride[0]} & ${wedding.coupleNames.groom[0]}`
+            }
             className="border-white/60 text-white"
           />
         </Reveal>
@@ -41,16 +46,25 @@ export function ClosingSection() {
         )}
 
         <Reveal delay={0.3}>
-          <div className="[&_span]:text-white/70 [&_span.tabular-nums]:text-white">
-            <CountdownTimer targetDate={wedding.weddingDate} />
+          <p className="text-xs tracking-[0.2em] text-white/70 uppercase">Counting down to forever</p>
+          <div className="mt-3 [&_span]:text-white/70 [&_span.tabular-nums]:text-white">
+            {detailsVisible ? (
+              <CountdownTimer targetDate={wedding.weddingDate} />
+            ) : (
+              <div className="flex flex-col items-center gap-3">
+                <div className="flex gap-4 blur-[3px] select-none" aria-hidden>
+                  {['Days', 'Hours', 'Min', 'Sec'].map((label) => (
+                    <div key={label} className="flex flex-col items-center gap-1">
+                      <span className="tabular-nums text-3xl">••</span>
+                      <span className="text-xs tracking-[0.15em] uppercase">{label}</span>
+                    </div>
+                  ))}
+                </div>
+                <ShowDetailsButton className="text-white/80 hover:text-white" />
+              </div>
+            )}
           </div>
         </Reveal>
-
-        {wedding.music && (
-          <Reveal delay={0.4}>
-            <MusicPlayer src={wedding.music.src} />
-          </Reveal>
-        )}
 
         <Reveal delay={0.5}>
           <p className="mt-4 text-xs tracking-[0.2em] text-white/60 uppercase">
