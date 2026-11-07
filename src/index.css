@@ -90,3 +90,35 @@ button {
   background: var(--color-accent);
   border-radius: 999px;
 }
+
+/* Sealed invitation cover — parchment atmosphere */
+.invitation-parchment {
+  background-color: #f7ecd8;
+  background-image:
+    radial-gradient(ellipse at 20% 15%, rgba(201, 162, 75, 0.12), transparent 45%),
+    radial-gradient(ellipse at 80% 85%, rgba(122, 31, 43, 0.06), transparent 40%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23c9a24b' stroke-opacity='0.07' stroke-width='1'%3E%3Cpath d='M20 30c8-10 20-10 28 0s20 10 28 0'/%3E%3Cpath d='M10 70c10-8 22-8 30 0s20 8 28 0'/%3E%3Ccircle cx='90' cy='40' r='6'/%3E%3Ccircle cx='40' cy='95' r='5'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: auto, auto, 180px 180px, 120px 120px;
+}
+
+.invitation-thread {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #7a1f2b 8%,
+    #9a2f3c 50%,
+    #7a1f2b 92%,
+    transparent 100%
+  );
+  box-shadow: 0 1px 2px rgba(74, 15, 24, 0.25);
+}
+
+.invitation-parchment p {
+  font-feature-settings: 'kern' 1;
+}
+
+.invitation-blessing {
+  font-family: 'Noto Serif Devanagari', var(--font-heading), serif;
+  font-weight: 500;
+}

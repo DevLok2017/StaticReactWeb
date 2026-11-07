@@ -7,7 +7,7 @@ export const DEFAULT_WEDDING: WeddingConfig = {
   coupleNames: { bride: 'Ananya', groom: 'Rohan' },
   weddingDate: '2027-02-14T10:00:00+05:30',
   timezone: 'Asia/Kolkata',
-  blessing: 'ॐ Shree Ganeshaya Namah',
+  blessing: 'श्री गणेशाय नमः',
   heroTagline: 'Two hearts, one journey',
   monogram: 'A & R',
   family: {
