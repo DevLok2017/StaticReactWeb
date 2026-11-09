@@ -1,3 +1,5 @@
+[![Deploy static content to Pages](https://github.com/DevLok2017/StaticReactWeb/actions/workflows/static.yml/badge.svg)](https://github.com/DevLok2017/StaticReactWeb/actions/workflows/static.yml)
+
 # Ananya & Rohan — Wedding Invitation
 
 A fully static, client-side, configuration-driven Indian wedding invitation website. No backend, no database, no paid APIs — everything renders from JSON files you edit yourself.
