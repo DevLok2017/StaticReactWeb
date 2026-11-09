@@ -5,6 +5,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgr()],
+  base: '/StaticReactWeb/',
   build: {
     sourcemap: false,
     rollupOptions: {
